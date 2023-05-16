@@ -14,7 +14,7 @@ export const onRequestOptions = async () => {
   // Set CORS to all /api responses
   export const onRequest = async ({ next }) => {
     const response = await next();
-    response.headers.set('Access-Control-Allow-Origin', 'http://api.escenda.net');
+    response.headers.set('Access-Control-Allow-Origin', 'https://api.escenda.net');
     response.headers.set('Access-Control-Max-Age', '86400');
     return response;
   };
