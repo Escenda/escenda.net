@@ -24,11 +24,11 @@ from rest_framework_simplejwt.views import (TokenObtainPairView,
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/blog/', include('blog.urls')),
-    path('api/auth/', include(views.router.urls)),
-    path('api/auth/user/', include('authentication.urls')),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
-    path('', TemplateView.as_view(template_name="frontend/index.html"), name="index_js")
+    path('blog/', include('blog.urls')),
+    path('auth/', include(views.router.urls)),
+    path('auth/user/', include('authentication.urls')),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+    # path('', TemplateView.as_view(template_name="frontend/index.html"), name="index_js")
 ]

@@ -30,11 +30,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
+CSRF_TRUSTED_ORIGINS = [
+     'https://api.escenda.net',
+     'http://api.escenda.net',
+     'https://escenda.net',
+     'http://escenda.net',
+]
 
 CORS_ORIGIN_WHITELIST = [
-     'http://127.0.0.1:4000',
-     'http://127.0.0.1:3000'
+     'https://api.escenda.net',
+     'http://api.escenda.net',
+     'https://escenda.net',
+     'http://escenda.net',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -52,16 +59,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'corsheaders',
+    'rest_framework',
     'authentication.apps.AuthenticationConfig',
     'blog.apps.BlogConfig'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

@@ -8,6 +8,7 @@ export const get_articles = () => async dispatch => {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
+            'Access-Control-Allow-Origin': '*',
         }
     };
 
@@ -36,6 +37,7 @@ export const get_article_detail = (id) => async dispatch => {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
+            'Access-Control-Allow-Origin': '*',
         }
     };
 
