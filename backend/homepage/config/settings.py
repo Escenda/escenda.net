@@ -30,19 +30,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-     'https://api.escenda.net',
-     'http://api.escenda.net',
-     'https://escenda.net',
-     'http://escenda.net',
-]
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
 
-CORS_ORIGIN_WHITELIST = [
-     'https://api.escenda.net',
-     'http://api.escenda.net',
-     'https://escenda.net',
-     'http://escenda.net',
-]
+CORS_ORIGIN_WHITELIST = ['http://*', 'https://*']
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True

@@ -1,32 +1,37 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Blog from './components/templates/blog/index.jsx';
-import Home from './components/templates/home/index.jsx';
-import Portfolio from './components/templates/portfolio/index.jsx';
-
-import ArticleContent from './components/templates/blog/show.jsx';
+import { TextField } from './components/molecules/index.js';
 
 import Login from './components/templates/auth/login.jsx';
 import Logout from './components/templates/auth/logout.jsx';
 
+import React, { Suspense } from 'react';
+
+const LazyHome = React.lazy(() => import('./components/templates/home/index.jsx'));
+const LazyBlogIndex = React.lazy(() => import('./components/templates/blog/index.jsx'));
+const LazyBlogShow = React.lazy(() => import('./components/templates/blog/show.jsx'));
+const LazyPortfolio = React.lazy(() => import('./components/templates/portfolio/index.jsx'));
+
 const PagesRoute = () => {
   return (
-    <Routes>
-      <Route path='*' element='404' />
-      <Route path='/' element={ <Home /> } />
-      <Route path='/blog'>
+    <Suspense fallback={ <TextField text={ '' } /> }>
+      <Routes>
         <Route path='*' element='404' />
-        <Route path='' element={ <Blog /> } />
-        <Route path='post/:id/' element={ <ArticleContent /> } />
-      </Route>
-      <Route path='/portfolio' element={ <Portfolio /> } />
-      <Route path='/auth'>
-        <Route path='*' element='404' />
-        <Route path='login' element={ <Login /> } />
-        <Route path='logout' element={ <Logout /> } />
-      </Route>
-    </Routes>
-  )
+        <Route path='/' element={ <LazyHome /> } />
+        <Route path='/blog'>
+          <Route path='*' element='404' />
+          <Route path='' element={ <LazyBlogIndex /> } />
+          <Route path='post/:id/' element={ <LazyBlogShow /> } />
+        </Route>
+        <Route path='/portfolio' element={ <LazyPortfolio /> } />
+        <Route path='/auth'>
+          <Route path='*' element='404' />
+          <Route path='login' element={ <Login /> } />
+          <Route path='logout' element={ <Logout /> } />
+        </Route>
+      </Routes>
+    </Suspense>
+    )
 }
 
 export default PagesRoute;

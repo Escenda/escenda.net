@@ -7,6 +7,7 @@ import 'highlight.js/styles/github-dark-dimmed.css';
 import { BrowserRouter } from 'react-router-dom';
 import PagesRoute from './Routes.jsx';
 
+
 const App = () => {
   return (
       <div className="App">
