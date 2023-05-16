@@ -1,0 +1,87 @@
+footer {
+    /* width: calc(100% - 40px); */
+    width: var(--footer-width);
+    height: var(--footer-height);
+    margin: 2rem auto !important;
+    padding: 1.5rem !important;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .profile-details {
+    width: 18rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+footer .profile-details > p {
+    text-align: center;
+    font-size: 1.35rem;
+    width: 100%;
+}
+
+footer .profile-details .profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    width: 5rem;
+}
+
+footer .profile-details img {
+    height: 5rem;
+    width: 5rem;
+    object-fit: cover;
+    border-radius: 1.6rem;
+}
+
+footer .profile-details .profile-description {
+    font-size: 1.35rem;
+    white-space: nowrap;
+    padding-right: 0.5rem;
+}
+
+footer .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+    transform: translateX(-6rem);
+}
+
+footer .neumorphism-btn {
+    width: 6rem;
+    height: 6rem;
+}
+
+footer .neumorphism-btn svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+footer .neumorphism-btn svg.login {
+    transform: translateX(-0.1rem);
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+  footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  footer {
+    display: none;
+  }
+}

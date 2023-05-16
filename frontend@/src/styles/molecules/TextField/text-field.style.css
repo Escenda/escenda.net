@@ -1,0 +1,10 @@
+article.markdown-body,
+ol.article-list {
+  width: var(--content-width);
+  height: var(--content-height);
+  padding: 2rem 2.25rem;
+  font-size: 1.75rem;
+  overflow-y: scroll;
+  color: #2c3f65 !important;
+  background-color: unset !important;
+}

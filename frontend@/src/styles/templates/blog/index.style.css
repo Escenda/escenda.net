@@ -1,0 +1,5 @@
+section.blog-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

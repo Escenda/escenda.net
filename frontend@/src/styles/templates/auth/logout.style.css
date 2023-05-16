@@ -1,0 +1,12 @@
+section.logout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: var(--content-height);
+}
+
+section.logout > p {
+    font-size: 2.5rem;
+}

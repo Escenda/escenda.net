@@ -1,0 +1,411 @@
+/* Div style */
+
+.neumorphism-div {
+    border-radius: 2rem;
+    background: #E0E5EC;
+    box-shadow:  1rem 1rem 1.5rem rgba(163,177,198,0.6),
+                -1rem -1rem 1.5rem rgba(255,255,255,0.5);
+}
+
+
+
+/* Scroll style */
+
+.neumorphism-scroll {
+    border-radius: 1rem;
+    background: #E0E5EC;
+    box-shadow:  1rem 1rem 1.5rem rgba(163,177,198,0.6),
+                -1rem -1rem 1.5rem rgba(255,255,255,0.5);
+	list-style: none;
+	overflow-x: hidden;	
+	overflow-y: scroll;
+}
+
+
+
+/* Button style */
+
+.neumorphism-btn .visually-hidden {
+    border-width: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+.neumorphism-btn {
+    position: relative;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    /* padding: 2px; border gap */
+    background: #E0E5EC;
+    box-shadow:  1rem 1rem 1.5rem rgba(163,177,198,0.6),
+                -1rem -1rem 1.5rem rgba(255,255,255,0.5);
+}
+
+.neumorphism-btn > .content-wrapper {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    transition: box-shadow 0.2s ease-in-out;
+    display: grid;
+    place-items: center;
+}
+
+.neumorphism-btn.active:not(.cannot-press) > input + label,
+.neumorphism-btn:not(.cannot-press) > input:active + label {
+    box-shadow: inset 0.3rem 0.3rem 0.7rem rgba(136, 165, 191, 0.48),
+                inset -0.3rem -0.3rem 0.7rem #ffffff;
+}
+
+.neumorphism-btn:not(.cannot-press) > label > p {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    white-space: nowrap;
+    user-select: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.neumorphism-btn.active:not(.cannot-press) > label > p,
+.neumorphism-btn:not(.cannot-press) > input:active + label > p {
+    transform: scale(90%);
+}
+
+.neumorphism-btn.cannot-press > .content-wrapper {
+    cursor: auto;
+}
+
+.neumorphism-btn.cannot-press > label {
+    opacity: 0.5;
+}
+
+.neumorphism-btn-floating .visually-hidden {
+    border-width: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+.neumorphism-btn-floating {
+    position: relative;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    /* padding: 2px; border gap */
+    background: #E0E5EC;
+    box-shadow:  0.3rem 0.3rem 1rem rgba(163,177,198,0.6),
+                -0.3rem -0.3rem 1rem rgba(163,177,198,0.6);
+    z-index: 1;
+}
+
+.neumorphism-btn-floating > .content-wrapper {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    /* transition: all 0.2s ease-in-out; */
+    display: grid;
+    place-items: center;
+}
+
+.neumorphism-btn-floating.active:not(.cannot-press) > input + label,
+.neumorphism-btn-floating:not(.cannot-press) > input:active + label {
+    box-shadow: inset 0.3rem 0.3rem 0.7rem rgba(136, 165, 191, 0.48),
+                inset -0.3rem -0.3rem 0.7rem #ffffff;
+}
+
+
+
+/* Inset style */
+
+.neumorphism-inset {
+    position: relative;
+    border-radius: 2rem;
+    background: #E0E5EC;
+    box-shadow: inset 0.4rem 0.4rem 1.2rem rgba(163,177,198,0.6),
+                inset -0.4rem -0.4rem 1.2rem rgba(255,255,255,0.5);
+}
+
+.neumorphism-inset-dark {
+    position: relative;
+    border-radius: 2rem;
+    background: #E0E5EC;
+    box-shadow: inset 0.6rem 0.6rem 2rem rgba(163,177,198,0.6),
+                inset -0.2rem -0.2rem 1rem rgba(163,177,198,0.6);
+}
+
+.neumorphism-inset-dark * {
+    background: transparent;
+}
+
+/* .neumorphism-inset-dark.neumorphism-under-wrapper {
+    box-shadow: none;
+}
+
+.neumorphism-inset-dark.neumorphism-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    background: transparent;
+    box-shadow: inset 6px 6px 2rem rgba(163,177,198,0.6),
+                inset -2px -2px 1rem rgba(163,177,198,0.6);
+} */
+
+
+
+/* Table style */
+
+.neumorphism-table {
+    border-radius: 2rem;
+    background: #E0E5EC;
+    box-shadow:  1rem 1rem 1.5rem rgba(163,177,198,0.6),
+                -1rem -1rem 1.5rem rgba(255,255,255,0.5);
+    padding: 0 2rem 2rem 2rem;
+    height: 100%;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.neumorphism-table table {
+    border-collapse: separate;
+    border-spacing: 0 2rem;
+    table-layout: fixed;
+    width: 100%;
+    max-height: 100%;
+}
+
+.neumorphism-table table thead {
+    height: 60px;
+    background: #E0E5EC;
+    border-bottom: 2px solid rgba(136, 165, 191, 0.48);
+    padding: 0 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.neumorphism-table table tbody {
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.neumorphism-table tr.table-hide {
+    display: none;
+}
+
+.neumorphism-table th {
+    font-weight: 400;
+}
+
+.neumorphism-table th.title,
+.neumorphism-table td.title {
+    width: 70%;
+    padding: 0 2.5%;
+}
+
+.neumorphism-table td {
+    font-weight: 400;
+    max-height: 2.4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.neumorphism-table td > p {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.neumorphism-table td > input {
+    text-align: center;
+    border-radius: 0.5rem;
+    width: 3.5em;
+    height: 2em;
+}
+
+.neumorphism-table td > .neumorphism-inset {
+    height: 2em;
+    border-radius: 0.5rem;
+    background: #E0E5EC;
+    box-shadow: inset 0.3rem 0.3rem 1.5rem rgba(163,177,198,0.6),
+                inset -0.3rem -0.3rem 1.5rem rgba(255,255,255,0.5);
+}
+
+.neumorphism-table td > .neumorphism-btn {
+    width: 3em;
+    height: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem;
+    background: #E0E5EC;
+    box-shadow:  0.3rem 0.3rem 1rem rgba(163,177,198,0.6),
+                -0.3rem -0.3rem 1rem rgba(255,255,255,0.5);
+}
+
+.neumorphism-table td > .neumorphism-btn > .content-wrapper {
+    border-radius: 0.5rem;
+}
+
+
+
+.neumorphism-table-flexbox {
+    width: 90%;
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.neumorphism-table-flexbox .head {
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.neumorphism-table-flexbox .head .title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neumorphism-table-flexbox .body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 1rem;
+    margin-top: 2rem;
+}
+
+.neumorphism-table-flexbox .body .item {
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.neumorphism-table-flexbox .body .item.table-hide {
+    display: none;
+}
+
+.neumorphism-table-flexbox .body .item .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.neumorphism-table-flexbox .body .item .content.left {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.neumorphism-table-flexbox .body .item .content.center {
+    text-align: center;
+}
+
+.neumorphism-table-flexbox .body .item .content.right {
+    text-align: right;
+    padding-right: 2rem;
+}
+
+/* Modal style */
+
+.neumorphism-modal {
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(219, 219, 229, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out;
+}
+
+.neumorphism-modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.neumorphism-modal > .modal-content {
+    box-shadow: none;
+    border-radius: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.neumorphism-modal > .modal-content.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.neumorphism-modal > .modal-content > .content-header {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.neumorphism-modal > .modal-content > .content-header > p {
+    font-size: larger;
+}
+
+.neumorphism-modal > .modal-content > .content-header > .close-modal {
+    position: absolute;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+}

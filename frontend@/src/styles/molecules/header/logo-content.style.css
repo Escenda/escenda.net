@@ -1,0 +1,26 @@
+#navigator > .logo-content {
+  width: 18rem;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navigator > .logo-content > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 18rem;
+  height: 7rem;
+  padding: 1rem 1.5rem;
+}
+
+#navigator > .logo-content > a > img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 1rem;
+}
+
+#navigator > .logo-content > a > p {
+  font-size: 1.5rem;
+}

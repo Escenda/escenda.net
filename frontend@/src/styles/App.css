@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+:root {
+  --header-height: 10rem;
+  --header-width: 80rem;
+  --footer-height: 10rem;
+  --footer-width: 80rem;
+  --content-height: 72rem;
+  --content-width: 80rem;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #E0E5EC;
+  color: #2c3f65;
+}
+
+a.disable-decoration {
+  text-decoration: none;
+  color: initial;
+}
+
+[event], [onclick] {
+  cursor: pointer;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button,
+.no-spin {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+  -moz-appearance: textfield !important;
+}
+
+.vertical-line {
+  width: 0.125rem;
+  height: 97.5%;
+  background-color: rgba(44, 63, 101, 0.25);
+}
+
+.horizontal-line {
+  width: 90%;
+  height: 0.125rem;
+  background-color: rgba(44, 63, 101, 0.25);
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+  :root {
+    --header-height: 10rem;
+    --header-width: 95vw;
+    --footer-height: 10rem;
+    --footer-width: 95vw;
+    --content-height: 72rem;
+    --content-width: 95vw;
+  }
+}
+@media screen and (max-width: 640px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  :root {
+    --header-height: 10rem;
+    --header-width: 95vw;
+    --footer-height: 10rem;
+    --footer-width: 95vw;
+    --content-height: 72rem;
+    --content-width: 95vw;
+  }
+}
