@@ -3,7 +3,7 @@ export const onRequestOptions = async () => {
     return new Response(null, {
       status: 204,
       headers: {
-        'Access-Control-Allow-Origin': 'http://api.escenda.net',
+        'Access-Control-Allow-Origin': 'https://api.escenda.net',
         'Access-Control-Allow-Headers': '*',
         'Access-Control-Allow-Methods': '*',
         'Access-Control-Max-Age': '86400',
