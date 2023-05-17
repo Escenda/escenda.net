@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import '../../../styles/molecules/Article/article.style.css';
+import 'styles/molecules/Article/article.style.css';
 
 const Article = (props) => {
     const { id, author, title, description, tags, category } = props;

@@ -1,6 +1,6 @@
-import { LogoContent, NavigationList } from '../../molecules';
+import { LogoContent, NavigationList } from 'components/molecules';
 
-import '../../../styles/organisms/header.style.css';
+import 'styles/organisms/header.style.css';
 
 const pages = [
     {

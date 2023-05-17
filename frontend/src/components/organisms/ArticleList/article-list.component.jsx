@@ -1,15 +1,12 @@
-import { } from '../../molecules';
+import { Article, TextField } from 'components/molecules';
 
-import '../../../styles/organisms/article-list.style.css';
+import 'styles/organisms/article-list.style.css';
 
 import { connect, useSelector } from 'react-redux';
 
-import { useRunOnce } from '../../../hooks/useRunOnce.js';
+import { useRunOnce } from 'hooks/useRunOnce.js';
 
-import { get_articles } from '../../../redux/blog/blog.actions';
-import { Article } from '../../molecules';
-
-import { TextField } from "../../molecules";
+import { get_articles } from 'redux/blog/blog.actions';
 
 const ArticleList = (props) => {
     const { get_articles } = props;

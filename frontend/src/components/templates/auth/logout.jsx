@@ -1,9 +1,9 @@
 
-import '../../../styles/templates/auth/logout.style.css';
+import 'styles/templates/auth/logout.style.css';
 
+import { useRunOnce } from 'hooks/useRunOnce';
 import { connect } from 'react-redux';
-import { useRunOnce } from '../../../hooks/useRunOnce';
-import { logout } from '../../../redux/auth/auth.actions.js';
+import { logout } from 'redux/auth/auth.actions.js';
 
 
 const Logout = ({ logout }) => {

@@ -1,16 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { TextField } from './components/molecules/index.js';
+import { TextField } from 'components/molecules/index.js';
 
-import Login from './components/templates/auth/login.jsx';
-import Logout from './components/templates/auth/logout.jsx';
+import Login from 'components/templates/auth/login.jsx';
+import Logout from 'components/templates/auth/logout.jsx';
 
 import React, { Suspense } from 'react';
 
-const LazyHome = React.lazy(() => import('./components/templates/home/index.jsx'));
-const LazyBlogIndex = React.lazy(() => import('./components/templates/blog/index.jsx'));
-const LazyBlogShow = React.lazy(() => import('./components/templates/blog/show.jsx'));
-const LazyPortfolio = React.lazy(() => import('./components/templates/portfolio/index.jsx'));
+const LazyHome = React.lazy(() => import('components/templates/home/index.jsx'));
+const LazyBlogIndex = React.lazy(() => import('components/templates/blog/index.jsx'));
+const LazyBlogShow = React.lazy(() => import('components/templates/blog/show.jsx'));
+const LazyPortfolio = React.lazy(() => import('components/templates/portfolio/index.jsx'));
 
 const PagesRoute = () => {
   return (

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import '../../../styles/molecules/header/logo-content.style.css';
+import 'styles/molecules/header/logo-content.style.css';
 
 const LogoContent = () => {
 

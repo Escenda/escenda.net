@@ -7,15 +7,20 @@ import 'highlight.js/styles/github-dark-dimmed.css';
 import { BrowserRouter } from 'react-router-dom';
 import PagesRoute from './Routes.jsx';
 
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 
 const App = () => {
   return (
       <div className="App">
-        <BrowserRouter>
-          <Header />
-          <PagesRoute />
-          <Footer />
-        </BrowserRouter>
+        <Provider store={ store }>
+          <BrowserRouter>
+            <Header />
+            <PagesRoute />
+            <Footer />
+          </BrowserRouter>
+        </Provider>
       </div>
   )
 }

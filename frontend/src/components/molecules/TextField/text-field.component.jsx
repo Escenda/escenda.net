@@ -1,6 +1,5 @@
-import React from 'react';
 
-import '../../../styles/molecules/TextField/text-field.style.css';
+import 'styles/molecules/TextField/text-field.style.css';
 
 const TextField = (props) => {
     const { text, list_style } = props;

@@ -1,7 +1,7 @@
-import { TextField } from "../../molecules";
+import { TextField } from "components/molecules";
 
 import { connect } from "react-redux";
-import { get_article_detail } from "../../../redux/blog/blog.actions.js";
+import { get_article_detail } from "redux/blog/blog.actions.js";
 
 import { useEffect, useState } from 'react';
 import { unified } from 'unified';
@@ -17,7 +17,7 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypeStringify from 'rehype-stringify';
 // TOC
 
-import { useRunOnce } from "../../../hooks/useRunOnce";
+import { useRunOnce } from "hooks/useRunOnce";
 
 const parseMarkdown = async (text) => {
     const file = await unified()
@@ -55,7 +55,7 @@ const ArticleContent = (props) => {
 
     useEffect(() => {
         getContent();
-    }, [article]);
+    });
     
     return (
         <>

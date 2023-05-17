@@ -1,10 +1,10 @@
-import { LoginButton } from '../../atoms';
+import { LoginButton } from 'components/atoms';
 
-import '../../../styles/templates/auth/login.style.css';
+import 'styles/templates/auth/login.style.css';
 
 import { useState } from 'react';
 import { connect } from 'react-redux';
-import { login } from '../../../redux/auth/auth.actions.js';
+import { login } from 'redux/auth/auth.actions.js';
 
 import { useNavigate } from 'react-router-dom';
 

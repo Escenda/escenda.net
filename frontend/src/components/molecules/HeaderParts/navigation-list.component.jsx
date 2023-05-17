@@ -1,8 +1,8 @@
-import { NavigateButton } from "../../atoms";
+import { NavigateButton } from "components/atoms";
 
 import { useLocation } from 'react-router-dom';
 
-import '../../../styles/molecules/header/navigation-list.style.css';
+import 'styles/molecules/header/navigation-list.style.css';
 
 const NavigationList = ({ pages }) => {
     const location = useLocation();

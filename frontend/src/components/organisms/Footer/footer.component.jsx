@@ -1,14 +1,14 @@
-import { Copyright, ProfileDetails } from '../../molecules';
+import { Copyright, ProfileDetails } from 'components/molecules';
 
-import '../../../styles/organisms/footer.style.css';
+import 'styles/organisms/footer.style.css';
 
 import { useEffect, useState } from 'react';
 import { connect, useSelector } from 'react-redux';
-import { checkAuthenticated, load_user } from '../../../redux/auth/auth.actions';
+import { checkAuthenticated, load_user } from 'redux/auth/auth.actions';
 
-import { useRunOnce } from '../../../hooks/useRunOnce.js';
+import { useRunOnce } from 'hooks/useRunOnce.js';
 
-import { NavigateButton } from '../../atoms';
+import { NavigateButton } from 'components/atoms';
 
 const Footer = (props) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);

@@ -1,7 +1,7 @@
-import { TextField } from "../../molecules";
+import { TextField } from "components/molecules";
 
-import '../../../styles/addons/markdown/github-markdown.min.css';
-import '../../../styles/templates/portfolio/index.style.css';
+import 'styles/addons/markdown/github-markdown.min.css';
+import 'styles/templates/portfolio/index.style.css';
 
 const PortfolioIndex = () => {
     return (
